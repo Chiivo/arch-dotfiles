@@ -1,0 +1,27 @@
+#!/usr/bin/env sh
+
+help() {
+	echo '	-c,			copy selection'
+	echo '	-s,			save selection'
+}
+
+areacopy() {	
+	maim -usb 2 /tmp/screenshot.png || exit 1;
+	sleep .1;
+	xclip -selection clipboard < /tmp/screenshot.png -t image/png
+	notify-send -i /tmp/screenshot.png 'Screenshot' 'Selection Copied'
+	mpv /run/current-system/sw/share/sounds/freedesktop/stereo/camera-shutter.oga
+}
+
+areasave() {
+	maim -usb 2 /mnt/SSD/Images/Screenshots/screenshot.png || exit 1;
+	sleep .1;
+	notify-send -i /mnt/SSD/Images/Screenshots/screenshot.png 'Screenshot' 'Selection Saved'
+	mpv /run/current-system/sw/share/sounds/freedesktop/stereo/camera-shutter.oga
+}
+
+case "$1" in
+	-c) areacopy;;
+	-s) areasave;;
+	*) help;;
+esac
