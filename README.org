@@ -1,0 +1,41 @@
+#+TITLE: 🌸 Bliss 🌸
+
+[[screenshot.png]]
+
+* Software
+- Distro: arch
+- Display Manager: lightdm
+- Greeter: lightdm-mini-greeter
+- Window Manager: awesome
+- Image Viewer: nsxiv
+- Compositer: picom
+- App Launcher: rofi
+- Theme Manager: lxappearance
+- Icon Theme: papirus
+- Widget Theme: orchis
+- Mouse Cursor Icons: phinger
+- Terminal: alacritty
+- Text Editors: emacs, neovim
+- Browser: firefox
+- File Managers: thunar, joshuto
+- Video Player: mpv
+- Terminal Stuff: nitch, cbonsai, shell-color-scripts
+
+* Reminders
+- Out of sync kernel and driver updates can cause system to break
+- To make executable bash file:
+#+begin_src bash
+chmod +x /script/path
+#+end_src
+- Change ownership:
+#+begin_src bash
+chown (username) /file/path
+#+end_src
+- To extract zip into folder with same name:
+#+begin_src bash
+7z x *.zip -o\*
+#+end_src
+
+* TODO
+- add `x-gvfs-show` to partition option in `/etc/fstab` to have drive appear properly in thunar
+- Change grub timeout
