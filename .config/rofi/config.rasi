@@ -1,0 +1,145 @@
+/******************
+ * ROFI Color theme
+ * User: Chivo
+ *****************/
+
+configuration {
+	modi: "drun";
+	font: "monospace Medium 12";
+	display-run: "";
+	display-drun: "";
+	display-window: "";
+	display-ssh: "SSH";
+	display-combi: "Combi";
+	show-icons: true;
+	drun-display-format: "{icons} {name}";
+	window-format: "{t}";
+	scroll-method: 1;
+	sidebar-mode: true;
+}
+
+*{
+	foreground: #f5d1c8;
+	background: #262727;
+	border-color: @foreground;
+	separatorcolor: @foreground;
+	background-color: @background;
+}
+
+window {
+	location: center;
+	anchor: center;
+	background-color: @background;
+	border: 4;
+	border-radius: 10;
+	padding: 5px;
+	width: 350px;
+}
+
+mainbox {
+	border: 0;
+	padding: 0px;
+}
+
+message {
+	border: 1px 0px 0px 0px ;
+	border-color: @foreground;
+	padding: 0px ;
+}
+
+textbox {
+	text-color: @foreground;
+}
+
+element {
+	border-radius: 10;
+	margin: 5px;
+	padding: 5px;
+}
+
+element.normal.normal {
+	background-color: @background;
+	text-color: @foreground;
+}
+element.selected.normal {
+	background-color: @foreground;
+	text-color: @background;
+}
+element.alternate.normal {
+	background-color: @background;
+	text-color: @foreground;
+}
+
+element.normal.active {
+	background-color: transparent;
+	text-color: @foreground;
+}
+element.selected.active {
+	background-color: @foreground;
+	text-color: @background;
+}
+element.alternate.active {
+	background-color: transparent;
+	text-color: @foreground;
+}
+
+element-icon {
+	size: 24px;
+}
+
+mode-switcher {
+  enabled: false;
+	border: 0px solid 0px 0px ;
+	border-color: @foreground;
+}
+
+button {
+	enabled: false;
+  border-radius: 10px;
+  horizontal-align: 0.5;
+  vertical-align: 0.5;
+  padding: 0px;
+  text-color: @foreground;
+}
+
+button.selected {
+	background-color: @foreground;
+	text-color: @background;
+}
+
+inputbar {
+	border: 0px 0px 0px solid 0px;
+	spacing: 10;
+	text-color: @foreground;
+	padding: 5px;
+}
+
+entry {
+	spacing: 0;
+	text-color: @foreground;
+	placeholder: "";
+}
+
+prompt {
+	spacing: 0;
+	text-color: @foreground;
+}
+
+textbox-prompt-colon {
+	expand: false;
+	str: "";
+	text-color: @foreground;
+}
+
+inputbar {
+	children: [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+
+listview {
+	lines: 10;
+  fixed-height: false;
+  dynamic: true;
+	columns: 1;
+	border: 0px;
+	scrollbar: false;
+}
