@@ -1,0 +1,38 @@
+#!/usr/bin/env sh
+
+run() {
+	if ! pgrep -f "$1"; then
+		"$@"&
+	fi
+}
+
+### Screen ###
+run ~/scripts/display-setup
+
+### Mouse ###
+run solaar --window=hide
+# run ~/scripts/mousesettings
+
+### Wallpaper ###
+# run ~/scripts/wallpapersetter
+
+### Compositor ###
+run picom
+
+### Bluetooth ###
+run blueman-applet
+
+### Discord ###
+if pgrep -f discord; then
+	exit &
+else
+	# discocss &
+	discord &
+fi
+
+### Emacs ###
+if pgrep -f emacs; then
+	exit &
+else
+	emacs --daemon &
+fi
