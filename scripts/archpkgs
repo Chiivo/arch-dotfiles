@@ -2,32 +2,39 @@
 
 help() {
 	echo '	-i,			install packages from main repos'
+	echo '	-p,			install paru'
 	echo '	-a,			install packages from aur'
+}
+
+paruinstall() {
+	sudo pacman -S --needed base-devel
+	git clone https://aur.archlinux.org/paru.git
+	cd paru
+	makepkg -si
 }
 
 pkgsinstall() {
 	sudo pacman -S \
-
-		#Display Manager
+	# Display Manager
 		lightdm \
-	
-		# Window Manager
+	# Window Manager
 		awesome \
-
-		# Terminal App Stuff
+	# Terminal App Stuff
 		git \
+		wget \
 		neovim \
+		neofetch \
 		nsxiv \
 		zathura \
 		rofi \
 		numlockx \
+		bottom \
 		maim \
 		xclip \
 		mpv \
 		wine-staging \
 		fontconfig \
-
-		# General
+	# General
 		alacritty \
 		emacs \
 		firefox \
@@ -35,18 +42,18 @@ pkgsinstall() {
 		thunar-archive-plugin \
 		thunar-volman \
 		tumbler \
+		gvfs \
 		discord \
 		spotify \
 		pavucontrol \
 		blueman \
 		lxappearance \
 		solaar \
-
-		# Art Stuff
+		papirus-icon-theme \
+	# Art Stuff
 		krita \
 		blender \
-
-		# Audio Stuff
+	# Audio Stuff
 		sound-theme-freedesktop \
 		musescore \
 		yabridge \
@@ -54,13 +61,11 @@ pkgsinstall() {
 		carla \
 		calf \
 		easyeffects \
-
-		# Game Stuff
+	# Game Stuff
 		steam \
 		retroarch \
 		godot \
-
-		# Fonts
+	# Fonts
 		noto-fonts \
 		noto-fonts-cjk \
 		noto-fonts-emoji
@@ -68,36 +73,40 @@ pkgsinstall() {
 
 aurinstall() {
 	paru -S --skipreview \
-
-		# Display Greeter
+	# Display Greeter
 		lightdm-mini-greeter \
-
-		# Terminal App Stuff
+	# Terminal App Stuff
+		picom-allusive \
 		joshuto-bin \
 		shell-color-scripts \
-
-		# General
-		orchis-theme-git \
+		cbonsai \
+		discocss-git \
+	# General
+		orchis-theme \
 		phinger-cursors \
 		vial-appimage \
-
-		# Music Stuff
+	# Music Stuff
 		bitwig-studio \
-
-		# Game Stuff
+	# Game Stuff
 		prismlauncher \
 		heroic-games-launcher-bin \
 		# rpcs3-git \
 		soundux \
-
-		# Fonts
+	# Fonts
 		ttf-comfortaa \
 		otf-symbola \
 		ttf-victor-mono
 }
 
+gitrepo() {
+	git clone https://github.com/Chiivo/arch-dotfiles.git
+	cp ./arch-dotfiles/.config .config
+	cp ./arch-dotfiles/scripts ./
+}
+
 case "$1" in
 	-i) pkgsinstall;;
+	-p) paruinstall;;
 	-a) aurinstall;;
 	*) help;;
 esac
