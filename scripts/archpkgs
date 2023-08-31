@@ -102,6 +102,12 @@ gitrepo() {
 	git clone https://github.com/Chiivo/arch-dotfiles.git
 	cp ./arch-dotfiles/.config .config
 	cp ./arch-dotfiles/scripts ./
+	cp ./arch-dotfiles/.bashrc ./
+}
+
+bling() {
+	git clone https://github.com/BlingCorp/bling.git
+	cp bling .config/awesome/
 }
 
 case "$1" in
