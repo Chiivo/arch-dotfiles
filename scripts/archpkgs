@@ -100,7 +100,6 @@ aurinstall() {
 }
 
 copyfiles() {
-	git clone https://github.com/Chiivo/arch-dotfiles.git
 	cp -r ./arch-dotfiles/.config/ ./
 	cp -r ./arch-dotfiles/scripts/ ./
 	cp -r ./arch-dotfiles/.bashrc ./
