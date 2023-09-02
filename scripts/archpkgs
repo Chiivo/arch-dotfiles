@@ -20,7 +20,6 @@ pkgsinstall() {
 	\ # Window Manager
 		awesome \
 	\ # Terminal App Stuff
-		git \
 		wget \
 		neovim \
 		nsxiv \
@@ -81,6 +80,7 @@ aurinstall() {
 		cbonsai \
 		discocss-git \
 	\ # General
+		nvim-packer-git \
 		spotify \
 		orchis-theme \
 		phinger-cursors \
