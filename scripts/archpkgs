@@ -15,15 +15,14 @@ paruinstall() {
 
 pkgsinstall() {
 	sudo pacman -S \
-	# Display Manager
+	\ # Display Manager
 		lightdm \
-	# Window Manager
+	\ # Window Manager
 		awesome \
-	# Terminal App Stuff
+	\ # Terminal App Stuff
 		git \
 		wget \
 		neovim \
-		neofetch \
 		nsxiv \
 		zathura \
 		rofi \
@@ -34,7 +33,7 @@ pkgsinstall() {
 		mpv \
 		wine-staging \
 		fontconfig \
-	# General
+	\ # General
 		alacritty \
 		emacs \
 		firefox \
@@ -44,16 +43,15 @@ pkgsinstall() {
 		tumbler \
 		gvfs \
 		discord \
-		spotify \
 		pavucontrol \
 		blueman \
 		lxappearance \
 		solaar \
 		papirus-icon-theme \
-	# Art Stuff
+	\ # Art Stuff
 		krita \
 		blender \
-	# Audio Stuff
+	\ # Audio Stuff
 		sound-theme-freedesktop \
 		musescore \
 		yabridge \
@@ -61,11 +59,11 @@ pkgsinstall() {
 		carla \
 		calf \
 		easyeffects \
-	# Game Stuff
+	\ # Game Stuff
 		steam \
 		retroarch \
 		godot \
-	# Fonts
+	\ # Fonts
 		noto-fonts \
 		noto-fonts-cjk \
 		noto-fonts-emoji
@@ -73,26 +71,28 @@ pkgsinstall() {
 
 aurinstall() {
 	paru -S --skipreview \
-	# Display Greeter
+	\ # Display Greeter
 		lightdm-mini-greeter \
-	# Terminal App Stuff
+	\ # Terminal App Stuff
+		nitch \
 		picom-allusive \
 		joshuto-bin \
 		shell-color-scripts \
 		cbonsai \
 		discocss-git \
-	# General
+	\ # General
+		spotify \
 		orchis-theme \
 		phinger-cursors \
 		vial-appimage \
-	# Music Stuff
+	\ # Music Stuff
 		bitwig-studio \
-	# Game Stuff
+	\ # Game Stuff
 		prismlauncher \
 		heroic-games-launcher-bin \
 		# rpcs3-git \
 		soundux \
-	# Fonts
+	\ # Fonts
 		ttf-comfortaa \
 		otf-symbola \
 		ttf-victor-mono
