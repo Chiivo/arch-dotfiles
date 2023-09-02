@@ -4,6 +4,7 @@ help() {
 	echo '	-i,			install packages from main repos'
 	echo '	-p,			install paru'
 	echo '	-a,			install packages from aur'
+	echo '	-c,			copy files to proper places'
 }
 
 paruinstall() {
@@ -98,11 +99,11 @@ aurinstall() {
 		ttf-victor-mono
 }
 
-gitrepo() {
+copyfiles() {
 	git clone https://github.com/Chiivo/arch-dotfiles.git
-	cp ./arch-dotfiles/.config .config
-	cp ./arch-dotfiles/scripts ./
-	cp ./arch-dotfiles/.bashrc ./
+	cp -r ./arch-dotfiles/.config .config
+	cp -r ./arch-dotfiles/scripts ./
+	cp -r ./arch-dotfiles/.bashrc ./
 }
 
 bling() {
@@ -114,5 +115,6 @@ case "$1" in
 	-i) pkgsinstall;;
 	-p) paruinstall;;
 	-a) aurinstall;;
+	-c) copyfiles;;
 	*) help;;
 esac
