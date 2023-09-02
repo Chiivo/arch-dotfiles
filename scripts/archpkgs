@@ -33,6 +33,7 @@ pkgsinstall() {
 		mpv \
 		wine-staging \
 		fontconfig \
+		man-db \
 	\ # General
 		alacritty \
 		emacs \
