@@ -53,6 +53,7 @@ pkgsinstall() {
 		krita \
 		blender \
 	\ # Audio Stuff
+		alsa-utils \
 		sound-theme-freedesktop \
 		musescore \
 		yabridge \
