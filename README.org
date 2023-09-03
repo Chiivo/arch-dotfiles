@@ -4,8 +4,8 @@
 
 * Software
 - Distro: arch
-- Display Manager: lightdm
-- Greeter: lightdm-mini-greeter
+- Display Manager: sddm
+- Greeter: sddm-sugar-candy-git
 - Window Manager: awesome
 - Image Viewer: nsxiv
 - Compositer: picom
