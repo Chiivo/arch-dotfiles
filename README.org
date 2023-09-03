@@ -5,7 +5,7 @@
 * Software
 - Distro: arch
 - Display Manager: sddm
-- Greeter: sddm-sugar-candy-git
+- Greeter: sugar candy
 - Window Manager: awesome
 - Image Viewer: nsxiv
 - Compositer: picom
