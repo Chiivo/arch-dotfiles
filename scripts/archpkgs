@@ -17,10 +17,11 @@ paruinstall() {
 pkgsinstall() {
 	sudo pacman -S \
 	\ # Display Manager
-		lightdm \
+		sddm \
 	\ # Window Manager
 		awesome \
 	\ # Terminal App Stuff
+		xorg-xrdb \
 		wget \
 		neovim \
 		nsxiv \
@@ -74,7 +75,7 @@ pkgsinstall() {
 aurinstall() {
 	paru -S --skipreview \
 	\ # Display Greeter
-		lightdm-mini-greeter \
+		sddm-sugar-candy-git \
 	\ # Terminal App Stuff
 		nitch \
 		picom-allusive \
