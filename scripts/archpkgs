@@ -105,6 +105,7 @@ aurinstall() {
 copyfiles() {
 	cp -r ./arch-dotfiles/.config/ ./
 	cp -r ./arch-dotfiles/scripts/ ./
+	cp -r ./arch-dotfiles/fonts/ ./.local/share/
 	cp -r ./arch-dotfiles/.bashrc ./
 	cp -r ./arch-dotfiles/.Xresources ./
 }
