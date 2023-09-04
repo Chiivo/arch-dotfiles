@@ -1,10 +1,11 @@
 #!/usr/bin/env sh
 
 help() {
-	echo '	-i,			install packages from main repos'
 	echo '	-p,			install paru'
+	echo '	-i,			install packages from main repos'
 	echo '	-a,			install packages from aur'
 	echo '	-c,			copy files to proper places'
+	echo '	-b,			install bling'
 }
 
 paruinstall() {
@@ -106,5 +107,6 @@ case "$1" in
 	-p) paruinstall;;
 	-a) aurinstall;;
 	-c) copyfiles;;
+	-b) bling;;
 	*) help;;
 esac
