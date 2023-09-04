@@ -73,7 +73,7 @@ aurinstall() {
 		joshuto-bin \
 		shell-color-scripts \
 		cbonsai \
-		discocss-git \ # General
+		\ # discocss-git \ # General
 		nvim-packer-git \
 		spotify \
 		orchis-theme \
@@ -82,7 +82,7 @@ aurinstall() {
 		bitwig-studio \ # Music Stuff
 		prismlauncher \ # Game Stuff
 		heroic-games-launcher-bin \
-		# rpcs3-git \
+		\ # rpcs3-git \
 		soundux \
 		ttf-comfortaa \ # Fonts
 		otf-symbola \
