@@ -28,7 +28,6 @@ pkgsinstall() {
 		nsxiv \
 		zathura \
 		rofi \
-		numlockx \
 		bottom \
 		maim \
 		xclip \
