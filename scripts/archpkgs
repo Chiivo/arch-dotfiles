@@ -44,7 +44,6 @@ pkgsinstall() {
 		thunar-volman \
 		tumbler \
 		gvfs \
-		discord \
 		pavucontrol \
 		blueman \
 		lxappearance \
@@ -82,7 +81,7 @@ aurinstall() {
 		joshuto-bin \
 		shell-color-scripts \
 		cbonsai \
-		\ # discocss-git \
+		webcord-vencord-git \
 		\ # General
 		nvim-packer-git \
 		spotify \
