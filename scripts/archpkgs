@@ -5,7 +5,6 @@ help() {
 	echo '	-i,			install packages from main repos'
 	echo '	-a,			install packages from aur'
 	echo '	-c,			copy files to proper places'
-	echo '	-b,			install bling'
 }
 
 paruinstall() {
@@ -124,16 +123,10 @@ copyfiles() {
 	cp -r ./arch-dotfiles/.Xresources ./
 }
 
-bling() {
-	git clone https://github.com/BlingCorp/bling.git
-	cp bling .config/awesome/
-}
-
 case "$1" in
 	-i) pkgsinstall;;
 	-p) paruinstall;;
 	-a) aurinstall;;
 	-c) copyfiles;;
-	-b) bling;;
 	*) help;;
 esac
