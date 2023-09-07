@@ -83,6 +83,9 @@ aurinstall() {
 		`# Display Greeter` \
 		sddm-sugar-candy-git \
 		\
+		`# Display Manager Stuff` \
+		awesome-bling-git \
+		\
 		`# Terminal Stuff` \
 		nitch \
 		picom-allusive \
