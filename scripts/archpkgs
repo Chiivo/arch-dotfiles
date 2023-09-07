@@ -17,11 +17,13 @@ paruinstall() {
 
 pkgsinstall() {
 	sudo pacman -S \
-		\ # Display Manager
+		`# Display Manager` \
 		sddm \
-		\ # Window Manager
+		\
+		`# Window Manager` \
 		awesome \
-		\ # Terminal Stuff
+		\
+		`# Terminal Stuff` \
 		xorg-xrdb \
 		wget \
 		neovim \
@@ -35,7 +37,8 @@ pkgsinstall() {
 		wine-staging \
 		fontconfig \
 		man-db \
-		\ # General
+		\
+		`# General` \
 		alacritty \
 		emacs \
 		firefox \
@@ -49,10 +52,12 @@ pkgsinstall() {
 		lxappearance \
 		solaar \
 		papirus-icon-theme \
-		\ # Art Stuff
+		\
+		`# Art Stuff` \
 		krita \
 		blender \
-		\ # Audio Stuff
+		\
+		`# Audio Stuff` \
 		alsa-utils \
 		sound-theme-freedesktop \
 		musescore \
@@ -61,11 +66,13 @@ pkgsinstall() {
 		carla \
 		calf \
 		easyeffects \
-		\ # Game Stuff
+		\
+		`# Game Stuff` \
 		steam \
 		retroarch \
 		godot \
-		\ # Fonts
+		\
+		`# Fonts` \
 		noto-fonts \
 		noto-fonts-cjk \
 		noto-fonts-emoji
@@ -73,29 +80,34 @@ pkgsinstall() {
 
 aurinstall() {
 	paru -S --skipreview \
-		\ # Display Greeter
+		`# Display Greeter` \
 		sddm-sugar-candy-git \
-		\ # Terminal Stuff
+		\
+		`# Terminal Stuff` \
 		nitch \
 		picom-allusive \
 		joshuto-bin \
 		shell-color-scripts \
 		cbonsai \
 		webcord-vencord-git \
-		\ # General
+		\
+		`# General` \
 		nvim-packer-git \
 		spotify \
 		orchis-theme \
 		phinger-cursors \
 		vial-appimage \
-		\ # Music Stuff
+		\
+		`# Music Stuff` \
 		bitwig-studio \
-		\ # Game Stuff
+		\
+		`# Game Stuff` \
 		prismlauncher \
 		heroic-games-launcher-bin \
-		\ # rpcs3-git \
+		\
+		`# rpcs3-git` \
 		soundux \
-		\ # Fonts
+		`# Fonts` \
 		ttf-comfortaa \
 		otf-symbola \
 		ttf-victor-mono
