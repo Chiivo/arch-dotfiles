@@ -91,7 +91,7 @@ aurinstall() {
 		joshuto-bin \
 		shell-color-scripts \
 		cbonsai \
-		webcord-vencord-git \
+		vencord-desktop-git \
 		\
 		`# General` \
 		nvim-packer-git \
