@@ -39,6 +39,6 @@ chown (username) /file/path
 * TODO
 - add the following to fstab to have drive appear properly in thunar
 #+begin_src bash
-/dev/sda1      	none      	ext4      	x-gvfs-show  	0 3
+/dev/sda1      	/mnt/SSD      	ext4      	x-gvfs-show  	0 2
 #+end_src
 - Change grub timeout
