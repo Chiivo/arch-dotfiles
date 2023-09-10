@@ -27,6 +27,7 @@ pkgsinstall() {
 		\
 		`# Terminal Stuff` \
 		xorg-xrdb \
+		xorg-xinput \
 		wget \
 		neovim \
 		nsxiv \
@@ -127,6 +128,11 @@ copyfiles() {
 	cp -r ./arch-dotfiles/fonts/ ./.local/share/
 	cp -r ./arch-dotfiles/.bashrc ./
 	cp -r ./arch-dotfiles/.Xresources ./
+}
+
+enableservices() {
+	sudo systemctl enable --now sddm
+	sudo systemctl enable --now bluetooth
 }
 
 case "$1" in
