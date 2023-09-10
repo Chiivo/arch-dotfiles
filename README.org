@@ -37,7 +37,7 @@ chown (username) /file/path
 #+end_src
 
 * TODO
-- add the following to fstab to have drive appear properly in thunar
+- add the following to fstab to have second drive appear properly in thunar
 #+begin_src bash
 /dev/sda1      	/mnt/SSD      	ext4      	x-gvfs-show  	0 2
 #+end_src
