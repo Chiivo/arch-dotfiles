@@ -11,7 +11,7 @@ run ~/scripts/display-setup
 
 ### Mouse ###
 run solaar --window=hide
-# run ~/scripts/mousesettings
+run ~/scripts/mousesettings
 
 ### Wallpaper ###
 # run ~/scripts/wallpapersetter
