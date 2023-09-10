@@ -37,5 +37,8 @@ chown (username) /file/path
 #+end_src
 
 * TODO
-- make `x-gvfs-show` the only option in partition option in `/etc/fstab` and change filetype to `ext4` to have drive appear properly in thunar
+- add the following to fstab to have drive appear properly in thunar
+#+begin_src bash
+/dev/sda1      	none      	ext4      	x-gvfs-show  	0 3
+#+end_src
 - Change grub timeout
