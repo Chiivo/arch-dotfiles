@@ -47,6 +47,7 @@ pkgsinstall() {
 		firefox \
 		thunar \
 		thunar-archive-plugin \
+		file-roller\
 		thunar-volman \
 		tumbler \
 		gvfs \
