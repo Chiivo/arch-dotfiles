@@ -27,6 +27,7 @@ pkgsinstall() {
 		\
 		`# Terminal Stuff` \
 		xorg-xrdb \
+		xorg-xinput \
 		wget \
 		neovim \
 		nsxiv \
