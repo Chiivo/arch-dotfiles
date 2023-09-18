@@ -105,7 +105,7 @@ aurinstall() {
 		spotify \
 		orchis-theme \
 		phinger-cursors \
-		vial-appimage \
+		via-bin \
 		\
 		`# Music Stuff` \
 		bitwig-studio \
