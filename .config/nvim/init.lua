@@ -253,7 +253,6 @@ require'nvim-tree'.setup {
 	respect_buf_cwd = true,
 	view = {
 		width = 30,
-		hide_root_folder = false,
 		side = 'left',
 		preserve_window_proportions = true,
 		number = false,
