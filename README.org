@@ -23,6 +23,8 @@
 
 * Reminders
 - Out of sync kernel and driver updates can cause system to break
+  - if system breaks, *arch-chroot* into system through USB environment
+  - mount the big partition where everything is installed to */mnt* and do a system upgrade
 - To make executable bash file:
 #+begin_src bash
 chmod +x /script/path
@@ -35,10 +37,7 @@ chown (username) /file/path
 #+begin_src bash
 7z x *.zip -o\*
 #+end_src
-
-* TODO
 - add the following to fstab to have second drive appear properly in thunar
 #+begin_src bash
 /dev/sda1      	/mnt/SSD      	ext4      	x-gvfs-show  	0 2
 #+end_src
-- Change grub timeout
