@@ -349,25 +349,17 @@ require('nvim-autopairs').setup{
 }
 
 -- Indent-BlankLine
-vim.cmd ([[
-highlight IndentBlanklineIndent1 guifg='#ff8278' gui=nocombine
-highlight IndentBlanklineIndent2 guifg='#ffc178' gui=nocombine
-highlight IndentBlanklineIndent3 guifg='#eadc84' gui=nocombine
-highlight IndentBlanklineIndent4 guifg='#bde077' gui=nocombine
-highlight IndentBlanklineIndent5 guifg='#77bee0' gui=nocombine
-highlight IndentBlanklineIndent6 guifg='#dd91f3' gui=nocombine
-]])
-require("indent_blankline").setup {
-	space_char_blankline = " ",
-	char_highlight_list = {
-		"IndentBlanklineIndent1",
-		"IndentBlanklineIndent2",
-		"IndentBlanklineIndent3",
-		"IndentBlanklineIndent4",
-		"IndentBlanklineIndent5",
-		"IndentBlanklineIndent6",
-	},
-	filetype_exclude = {'dashboard'}
+require("ibl").setup {
+	indent = {
+		highlight = {
+			"WarningMsg",
+			"SpecialKey",
+			"Statement",
+			"Type",
+			"NonText",
+			"Title"
+		}
+	}
 }
 
 -- Twilight
