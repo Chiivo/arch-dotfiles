@@ -55,6 +55,7 @@ pkgsinstall() {
 		lxappearance \
 		solaar \
 		papirus-icon-theme \
+		virtualbox \
 		\
 		`# Art Stuff` \
 		krita \
