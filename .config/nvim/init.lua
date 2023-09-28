@@ -359,6 +359,10 @@ require("ibl").setup {
 			"NonText",
 			"Title"
 		}
+	},
+	scope = { enabled = false },
+	exclude = {
+		filetypes = { "dashboard" }
 	}
 }
 
