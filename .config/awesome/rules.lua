@@ -32,7 +32,7 @@ awful.rules.rules = {
 	},
 	{ 
 		rule = {
-			class = "vencorddesktop"
+			class = "VencordDesktop"
 		},
 		properties = {
 			screen = 2,
