@@ -99,7 +99,7 @@ client.connect_signal("unfocus",
 )
 
 -- Mouse follows focus
-local function move_mouse_onto_focused_client(c)
+--[[ local function move_mouse_onto_focused_client(c)
 	if mouse.object_under_pointer() ~= c then
 		local geometry = c:geometry()
 		local x = geometry.x + geometry.width/2
@@ -107,4 +107,4 @@ local function move_mouse_onto_focused_client(c)
 		mouse.coords({x = x, y = y}, true)
 	end
 end
-client.connect_signal("focus", move_mouse_onto_focused_client)
+client.connect_signal("focus", move_mouse_onto_focused_client) ]]
