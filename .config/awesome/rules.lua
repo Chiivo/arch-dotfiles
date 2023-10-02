@@ -21,6 +21,17 @@ awful.rules.rules = {
 			size_hints_honor = false
 		}
 	},
+	-- Screen 1
+	{ 
+		rule = {
+			class = "firefox"
+		},
+		properties = {
+			screen = 1,
+			tag = "1",
+			switchtotag = true
+		}
+	},
 	{ 
 		rule = {
 			class = "steam"
@@ -30,6 +41,16 @@ awful.rules.rules = {
 			tag = "2"
 		}
 	},
+	{ 
+		rule = {
+			class = "Spotify"
+		},
+		properties = {
+			screen = 1,
+			tag = "3"
+		}
+	},
+	-- Screen 2
 	{ 
 		rule = {
 			class = "VencordDesktop"
