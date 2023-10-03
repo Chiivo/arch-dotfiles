@@ -43,6 +43,15 @@ awful.rules.rules = {
 	},
 	{ 
 		rule = {
+			name = "Bitwig Studio"
+		},
+		properties = {
+			screen = 1,
+			tag = "2"
+		}
+	},
+	{ 
+		rule = {
 			class = "Spotify"
 		},
 		properties = {
