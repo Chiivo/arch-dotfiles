@@ -43,7 +43,25 @@ awful.rules.rules = {
 	},
 	{ 
 		rule = {
+			class = "heroic"
+		},
+		properties = {
+			screen = 1,
+			tag = "2"
+		}
+	},
+	{ 
+		rule = {
 			class = "retroarch"
+		},
+		properties = {
+			screen = 1,
+			tag = "2"
+		}
+	},
+	{ 
+		rule = {
+			class = "RPCS3"
 		},
 		properties = {
 			screen = 1,
