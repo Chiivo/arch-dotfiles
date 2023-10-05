@@ -70,6 +70,15 @@ awful.rules.rules = {
 	},
 	{ 
 		rule = {
+			class = "PrismLauncher"
+		},
+		properties = {
+			screen = 1,
+			tag = "2"
+		}
+	},
+	{ 
+		rule = {
 			name = "Bitwig Studio"
 		},
 		properties = {
