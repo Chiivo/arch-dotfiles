@@ -34,6 +34,15 @@ awful.rules.rules = {
 	},
 	{ 
 		rule = {
+			class = "Blender"
+		},
+		properties = {
+			screen = 1,
+			tag = "2"
+		}
+	},
+	{ 
+		rule = {
 			class = "steam"
 		},
 		properties = {
@@ -124,6 +133,7 @@ awful.rules.rules = {
 				"Welcome", -- bitwig
 				"Friends List", -- steam friends list
 				"Steam Settings", -- steam settings
+				"Blender Preferences", -- blender settings
 			},
 			role = {
 				"pop-up", -- e.g. Google Chrome's (detached) Developer Tools.
