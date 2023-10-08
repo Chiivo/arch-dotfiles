@@ -1,5 +1,6 @@
 #+TITLE: 🌸 Bliss 🌸
 
+[[screenshot.png]]
 
 * Software
 - Distro: arch
