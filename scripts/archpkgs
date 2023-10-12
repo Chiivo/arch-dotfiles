@@ -56,6 +56,7 @@ pkgsinstall() {
 		solaar \
 		papirus-icon-theme \
 		virtualbox \
+		obs-studio \
 		\
 		`# Art Stuff` \
 		krita \
