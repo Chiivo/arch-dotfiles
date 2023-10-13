@@ -114,6 +114,15 @@ awful.rules.rules = {
 			tag = "1"
 		}
 	},
+	{ 
+		rule = {
+			class = "obs"
+		},
+		properties = {
+			screen = 2,
+			tag = "3"
+		}
+	},
 	-- Floating clients.
 	{
 		rule_any = {
