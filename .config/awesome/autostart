@@ -27,7 +27,7 @@ if pgrep -f vencorddesktop; then
 	exit &
 else
 	# discocss &
-	vencord &
+	vencord-desktop &
 fi
 
 ### Emacs ###
