@@ -9,18 +9,19 @@ require("theme")
 
 modkey = "Mod4"
 
+-- Margin Widget
+local margin = wibox.widget {
+	widget = wibox.container.margin,
+	top = dpi(10)
+}
+
 -- Symbol Widget
 local symbol = wibox.widget {
 	{
-		{
-			widget = wibox.widget.textbox,
-			text = "",
-			valign ="center",
-			align = "center"
-		},
-		widget = wibox.container.margin,
-		top = dpi(10),
-		bottom = dpi(10)
+		widget = wibox.widget.textbox,
+		text = "",
+		valign ="center",
+		align = "center"
 	},
 	layout = wibox.layout.fixed.vertical,
 }
@@ -178,6 +179,10 @@ local middle = wibox.widget {
 	layout = wibox.container.place
 }
 
+-- Systray Widget
+local systray = wibox.widget.systray()
+systray:set_horizontal(false)
+
 -- Volume Widget
 local volume = wibox.widget {
 	widget = wibox.widget.textbox,
@@ -223,24 +228,16 @@ volume_widget:buttons(gears.table.join(
 -- Clock Widget
 local clock = wibox.widget {
 	{
-		widget = wibox.container.margin,
-		top = dpi(10),
-		{
-			widget = wibox.widget.textclock,
-			format = "%H",
-			valign = "center",
-			align = "center"
-		}
+		widget = wibox.widget.textclock,
+		format = "%H",
+		valign = "center",
+		align = "center"
 	},
 	{
-		widget = wibox.container.margin,
-		bottom = dpi(10),
-		{
-			widget = wibox.widget.textclock,
-			format = "%M",
-			valign = "center",
-			align = "center"
-		}
+		widget = wibox.widget.textclock,
+		format = "%M",
+		valign = "center",
+		align = "center"
 	},
 	layout = wibox.layout.fixed.vertical,
 }
@@ -354,6 +351,7 @@ bar:setup {
 		layout = wibox.layout.align.vertical,
 		{-- Left widgets
 			layout = wibox.layout.fixed.vertical,
+			margin,
 			symbol
 		},
 		{-- Middle widgets
@@ -362,9 +360,12 @@ bar:setup {
 		},
 		{ -- Right widgets
 			layout = wibox.layout.fixed.vertical,
+			systray,
+			margin,
 			volume_widget,
+			margin,
 			clock,
-			systraytoggle
+			margin
 		}
 	},
 	widget = wibox.container.background
