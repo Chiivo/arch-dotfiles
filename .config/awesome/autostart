@@ -13,6 +13,9 @@ run ~/scripts/display-setup
 run solaar --window=hide
 run ~/scripts/mousesettings
 
+### Tablet ###
+systemctl --user enable opentabletdriver --now
+
 ### Wallpaper ###
 # run ~/scripts/wallpapersetter
 
