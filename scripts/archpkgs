@@ -97,7 +97,7 @@ aurinstall() {
 		\
 		`# Terminal Stuff` \
 		nitch \
-		picom-allusive \
+		picom-git \
 		joshuto-bin \
 		shell-color-scripts \
 		cbonsai \
@@ -110,10 +110,13 @@ aurinstall() {
 		phinger-cursors \
 		vial-appimage \
 		\
+		`# Art` \
+		opentabletdriver \
 		`# Music Stuff` \
 		bitwig-studio \
 		\
 		`# Game Stuff` \
+		r2modman-appimage \
 		prismlauncher \
 		heroic-games-launcher-bin \
 		\
