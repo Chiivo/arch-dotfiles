@@ -26,11 +26,11 @@ run picom
 run blueman-applet
 
 ### Discord ###
-if pgrep -f vencorddesktop; then
+if pgrep -f vesktop; then
 	exit &
 else
 	# discocss &
-	vencord-desktop &
+	vesktop &
 fi
 
 ### Emacs ###
