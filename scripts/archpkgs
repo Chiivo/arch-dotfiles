@@ -24,6 +24,7 @@ pkgsinstall() {
 		\
 		`# Drivers` \
 		nvidia \
+		nvidia-settings \
 		\
 		`# Terminal Stuff` \
 		xorg-xrdb \
@@ -128,8 +129,7 @@ aurinstall() {
 		`# Fonts` \
 		ttf-comfortaa \
 		ttf-mac-fonts \
-		otf-symbola \
-		ttf-victor-mono
+		otf-symbola
 }
 
 copyfiles() {
