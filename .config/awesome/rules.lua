@@ -24,7 +24,7 @@ awful.rules.rules = {
 	-- Screen 1
 	{ 
 		rule = {
-			class = "firefox"
+			class = "LibreWolf"
 		},
 		properties = {
 			screen = 1,

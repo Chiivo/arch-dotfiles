@@ -63,7 +63,7 @@ naughty.config.padding = dpi(20)
 naughty.config.spacing = dpi(10)
 theme.notification_icon_size = 48
 naughty.config.icon_dirs = {
-	"/home/chivo/.icons/Papirus-Dark"
+	"/usr/share/icons/Papirus-Dark"
 }
 naughty.config.icon_formats = {
 	"png",
@@ -138,7 +138,7 @@ theme.awesome_icon = theme_assets.awesome_icon(
 )
 
 -- App icon theme
-theme.icon_theme = "Flatery-Pink-Dark"
+theme.icon_theme = "Papirus-Dark"
 
 -- Volume Popup
 theme.progressbar_fg = colors.pink

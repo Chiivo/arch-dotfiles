@@ -29,17 +29,22 @@ globalkeys = gears.table.join(
 		end,
 		{description = "restore minimized", group = "client"}
 	),
+
 	-- Help Screen
 	awful.key({ modkey, }, "s",
 		hotkeys_popup.show_help,
-		{description="show help", group="awesome"}),
+		{description="show help", group="awesome"}
+	),
+
 	-- Switch Tags
 	awful.key({ modkey, }, "Left",
 		awful.tag.viewprev,
 		{description = "view previous", group = "tag"}),
 	awful.key({ modkey, }, "Right",
 		awful.tag.viewnext,
-		{description = "view next", group = "tag"}),
+		{description = "view next", group = "tag"}
+	),
+
 	-- Switch Window Focus
 	awful.key({ modkey, }, "j",
 		function ()
@@ -47,16 +52,19 @@ globalkeys = gears.table.join(
 		end,
 		{description = "focus next by index", group = "client"}
 	),
+
 	awful.key({ modkey, }, "k",
 		function ()
 			awful.client.focus.byidx(-1)
 		end,
 		{description = "focus previous by index", group = "client"}
 	),
+
 	awful.key({ modkey, }, "u",
 		awful.client.urgent.jumpto,
 		{description = "jump to urgent client", group = "client"}
 	),
+
 	awful.key({ modkey, }, "Tab",
 		function ()
 			awful.client.focus.history.previous()
@@ -66,6 +74,7 @@ globalkeys = gears.table.join(
 		end,
 		{description = "go back", group = "client"}
 	),
+
 	-- Change Window Order
 	awful.key({ modkey, "Shift" }, "j",
 		function ()
@@ -73,12 +82,14 @@ globalkeys = gears.table.join(
 		end,
 		{description = "swap with next client by index", group = "client"}
 	),
+
 	awful.key({ modkey, "Shift" }, "k",
 		function ()
 			awful.client.swap.byidx( -1)
 		end,
 		{description = "swap with previous client by index", group = "client"}
 	),
+
 	-- Switch Screen Focus
 	awful.key({ modkey, }, "h",
 		function ()
@@ -86,12 +97,14 @@ globalkeys = gears.table.join(
 		end,
 		{description = "focus the next screen", group = "screen"}
 	),
+
 	awful.key({ modkey, }, "l",
 		function ()
 			awful.screen.focus_relative(-1)
 		end,
 		{description = "focus the previous screen", group = "screen"}
 	),
+
 	-- Resize Windows
 	awful.key({ modkey, "Shift" }, "l",
 		function ()
@@ -99,12 +112,14 @@ globalkeys = gears.table.join(
 		end,
 		{description = "increase master width factor", group = "layout"}
 	),
+
 	awful.key({ modkey, "Shift" }, "h",
 		function ()
 			awful.tag.incmwfact(-0.051)
 		end,
 		{description = "decrease master width factor", group = "layout"}
 	),
+
 	-- Open Terminal
 	awful.key({ modkey, "Shift" }, "Return",
 		function ()
@@ -112,16 +127,19 @@ globalkeys = gears.table.join(
 		end,
 		{description = "open a terminal", group = "launcher"}
 	),
+
 	-- Reload Awesome
 	awful.key({ modkey, }, "q",
 		awesome.restart,
 		{description = "reload awesome", group = "awesome"}
 	),
+
 	-- Quit Awesome
 	awful.key({ modkey, "Shift" }, "q",
 		awesome.quit,
 		{description = "quit awesome", group = "awesome"}
 	),
+
 	-- Rofi
 	awful.key({ modkey }, "p",
 		function()
@@ -129,6 +147,7 @@ globalkeys = gears.table.join(
 		end,
 		{description = "show rofi", group = "launcher"}
 	),
+
 	-- Screenshot
 	awful.key({ }, "Print",
 		function()
@@ -136,12 +155,14 @@ globalkeys = gears.table.join(
 		end,
 		{description = "Copy Screenshot", group = "Screenshot"}
 	),
+
 	awful.key({ modkey }, "Print",
 		function()
 			awful.spawn.with_shell("~/scripts/screenshot -s")
 		end,
 		{description = "Save Clipboard", group = "Screenshot"}
 	),
+
 	-- Volume
 	awful.key({ }, "XF86AudioRaiseVolume",
 		function()
@@ -152,6 +173,7 @@ globalkeys = gears.table.join(
 		end,
 		{description = "Volume Up", group = "Volume"}
 	),
+
 	awful.key({ }, "XF86AudioLowerVolume",
 		function()
 			awful.spawn.with_shell("~/scripts/volume -d")
@@ -161,6 +183,7 @@ globalkeys = gears.table.join(
 		end,
 		{description = "Volume Down", group = "Volume"}
 	),
+
 	awful.key({ }, "XF86AudioMute",
 		function()
 			awful.spawn.with_shell("~/scripts/volume -m")
@@ -170,6 +193,7 @@ globalkeys = gears.table.join(
 		end,
 		{description = "Mute Volume", group = "Volume"}
 	),
+
 	-- Bottom
 	awful.key({ modkey, "Shift" }, "Escape",
 		function()
@@ -177,6 +201,7 @@ globalkeys = gears.table.join(
 		end,
 		{description = "Spawn Bottom", group = "launcher"}
 	),
+
 	-- Scratchpad
 	awful.key({ modkey, }, "Return",
 		function()
@@ -184,6 +209,7 @@ globalkeys = gears.table.join(
 		end,
 		{description = "Spawn Scratchpad", group = "launcher"}
 	),
+
 	-- Toggle Bar
 	awful.key({ modkey, }, "b",
 		function()
@@ -192,8 +218,10 @@ globalkeys = gears.table.join(
 		{description = "Toggle Bar", group = "screen"}
 	)
 )
+
 -- Client Keybindings
 clientkeys = gears.table.join(
+
 	-- Set Fullscreen
 	awful.key({ modkey, }, "f",
 		function (c)
@@ -202,6 +230,7 @@ clientkeys = gears.table.join(
 		end,
 		{description = "toggle fullscreen", group = "client"}
 	),
+
 	-- Close Window
 	awful.key({ modkey, "Shift" }, "c",
 		function (c)
@@ -209,11 +238,13 @@ clientkeys = gears.table.join(
 		end,
 		{description = "close", group = "client"}
 	),
+
 	-- Toggle Floating
 	awful.key({ modkey, "Control" }, "space",
 		awful.client.floating.toggle,
 		{description = "toggle floating", group = "client"}
 	),
+
 	-- Move to Master
 	awful.key({ modkey, "Control" }, "Return",
 		function (c)
@@ -221,6 +252,7 @@ clientkeys = gears.table.join(
 		end,
 		{description = "move to master", group = "client"}
 	),
+
 	-- Move to Unfocused Screen
 	awful.key({ modkey, }, "o",
 		function (c)
@@ -228,6 +260,7 @@ clientkeys = gears.table.join(
 		end,
 		{description = "move to screen", group = "client"}
 	),
+
 	-- Minimize Window
 	awful.key({ modkey, }, "n",
 		function (c)
@@ -236,6 +269,7 @@ clientkeys = gears.table.join(
 		end,
 		{description = "minimize", group = "client"}
 	),
+
 	-- Maximize Window
 	awful.key({ modkey, }, "m",
 		function (c)
@@ -261,6 +295,7 @@ for i = 1, 9 do
 			end,
 			{description = "view tag #"..i, group = "tag"}
 		),
+
 		-- Move client to tag.
 		awful.key({ modkey, "Shift" }, "#" .. i + 9,
 			function ()

@@ -9,6 +9,9 @@ run() {
 ### Screen ###
 run ~/scripts/display-setup
 
+### Wifi ###
+run nm-applet
+
 ### Mouse ###
 run solaar --window=hide
 run ~/scripts/mousesettings

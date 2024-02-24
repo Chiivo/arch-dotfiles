@@ -182,6 +182,7 @@ local middle = wibox.widget {
 -- Systray Widget
 local systray = wibox.widget.systray()
 systray:set_horizontal(false)
+systray:set_base_size(25)
 
 -- Volume Widget
 local volume = wibox.widget {
@@ -372,13 +373,13 @@ bar:setup {
 }
 bar:struts{ left = dpi(50) }
 
--- client.connect_signal("property::fullscreen", function(c)
---   if c.fullscreen then
--- 		bar.ontop = false
--- 	else
--- 		bar.ontop = true
--- 	end
--- end)
+client.connect_signal("property::fullscreen", function(c)
+  if c.fullscreen then
+		bar.visible = false
+	else
+		bar.visible = true
+	end
+end)
 
 function bartoggle()
 	if bar.visible == true then
