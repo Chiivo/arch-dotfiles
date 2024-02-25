@@ -339,14 +339,15 @@ clock:connect_signal('mouse::leave', function()
 end)
 
 -- Create bar
-local bar = wibox ({
-	x = dpi(20),
-	y = (screen.geometry.height - (screen.geometry.height - dpi(40))) / 2,
+local bar = awful.wibar {
+	-- x = dpi(20),
+	-- y = (screen.geometry.height - (screen.geometry.height - dpi(40))) / 2,
+	position = "left",
 	screen = 1,
 	height = screen.geometry.height - dpi(40),
 	width = dpi(30),
 	visible = true,
-})
+}
 bar:setup {
 	{
 		layout = wibox.layout.align.vertical,
@@ -371,7 +372,7 @@ bar:setup {
 	},
 	widget = wibox.container.background
 }
-bar:struts{ left = dpi(50) }
+-- bar:struts{ left = dpi(50) }
 
 client.connect_signal("property::fullscreen", function(c)
   if c.fullscreen then
