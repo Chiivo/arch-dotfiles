@@ -181,8 +181,16 @@ local middle = wibox.widget {
 
 -- Systray Widget
 local systray = wibox.widget.systray()
+local systraycontainer = wibox.widget {
+	widget = wibox.container.margin,
+	left = dpi(1),
+	right = dpi(1),
+	{
+		systray,
+		layout = wibox.layout.fixed.vertical
+	}
+}
 systray:set_horizontal(false)
-systray:set_base_size(25)
 
 -- Volume Widget
 local volume = wibox.widget {
@@ -325,8 +333,8 @@ local calendarpopup = awful.popup ({
 	},
 	border_width = 0,
 	ontop = true,
-	x = dpi(70),
-	y = dpi(802),
+	x = dpi(50),
+	y = dpi(765),
 	visible = false
 })
 
@@ -344,7 +352,7 @@ local bar = awful.wibar {
 	-- y = (screen.geometry.height - (screen.geometry.height - dpi(40))) / 2,
 	position = "left",
 	screen = 1,
-	height = screen.geometry.height - dpi(40),
+	-- height = screen.geometry.height - dpi(40),
 	width = dpi(30),
 	visible = true,
 }
@@ -362,7 +370,7 @@ bar:setup {
 		},
 		{ -- Right widgets
 			layout = wibox.layout.fixed.vertical,
-			systray,
+			systraycontainer,
 			margin,
 			volume_widget,
 			margin,
@@ -374,13 +382,13 @@ bar:setup {
 }
 -- bar:struts{ left = dpi(50) }
 
-client.connect_signal("property::fullscreen", function(c)
+--[[ client.connect_signal("property::fullscreen", function(c)
   if c.fullscreen then
 		bar.visible = false
 	else
 		bar.visible = true
 	end
-end)
+end) ]]
 
 function bartoggle()
 	if bar.visible == true then
