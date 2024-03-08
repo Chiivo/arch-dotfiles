@@ -10,6 +10,7 @@ require('packer').startup(function()
 	use 'nvim-lua/plenary.nvim'
 	use 'nvim-telescope/telescope.nvim'
 	use 'nvim-tree/nvim-tree.lua'
+	use 'nvim-treesitter/nvim-treesitter'
 	use 'nvim-treesitter/playground'
 	use 'akinsho/nvim-bufferline.lua'
 	use 'nvimdev/dashboard-nvim'
@@ -18,7 +19,6 @@ require('packer').startup(function()
 	use 'rktjmp/lush.nvim'
 	use '~/.config/nvim/colors/bliss'
 	use 'Manas140/run.nvim'
-	use 'nvim-treesitter/nvim-treesitter'
 	use 'folke/twilight.nvim'
 	use 'folke/which-key.nvim'
 	use 'hrsh7th/cmp-buffer'
@@ -28,7 +28,6 @@ require('packer').startup(function()
 	use 'L3MON4D3/LuaSnip'
 	use 'saadparwaiz1/cmp_luasnip'
 	use 'rafamadriz/friendly-snippets'
-	use 'nvim-neorg/neorg'
 	use 'nvim-orgmode/orgmode'
 	use 'jbyuki/nabla.nvim'
 	use 'dhruvasagar/vim-table-mode'
@@ -664,53 +663,19 @@ require'nvim-treesitter.configs'.setup {
 	}
 }
 
--- Neorg
-require('neorg').setup {
-	load = {
-		["core.defaults"] = {},
-		["core.concealer"] = {
-			config = {
-				icon_preset = 'varied'
-			}
-		},
-		["core.export.markdown"] = {},
-		["core.qol.toc"] = {},
-		["core.journal"] = {},
-		["core.manoeuvre"] = {},
-		["core.presenter"] = {
-			config = {
-				zen_mode = 'truezen'
-			}
-		},
-		["core.completion"] = {
-			config = {
-				engine = 'nvim-cmp'
-			}
-		},
-		["core.export"] = {},
-		["core.integrations.nvim-cmp"] = {},
-	}
-}
-
 -- Orgmode
--- Load custom treesitter grammar for org filetype
 require('orgmode').setup_ts_grammar()
--- Treesitter configuration
 require('nvim-treesitter.configs').setup {
-  -- If TS highlights are not enabled at all, or disabled via `disable` prop,
-  -- highlighting will fallback to default Vim syntax highlighting
   highlight = {
     enable = true,
-    -- Required for spellcheck, some LaTex highlights and
-    -- code block highlights that do not have ts grammar
-    additional_vim_regex_highlighting = {'org'},
   },
-  ensure_installed = {'org'}, -- Or run :TSUpdate org
+  ensure_installed = {'org'},
 }
 require('orgmode').setup({
   org_agenda_files = {'~/Dropbox/org/*', '~/my-orgs/**/*'},
   org_default_notes_file = '~/Dropbox/org/refile.org',
 })
+
 -- Which-Key
 local wk = require("which-key")
 wk.setup{
