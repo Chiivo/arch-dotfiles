@@ -43,7 +43,6 @@ pkgsinstall() {
 		\
 		`# General` \
 		alacritty \
-		emacs \
 		thunar \
 		thunar-archive-plugin \
 		file-roller\
@@ -104,11 +103,12 @@ aurinstall() {
 		joshuto-bin \
 		shell-color-scripts \
 		cbonsai \
-		vencord-desktop-git \
+		vesktop-bin \
 		\
 		`# General` \
 		librewolf-bin \
 		nvim-packer-git \
+		logseq-desktop-bin \
 		spotify \
 		orchis-theme \
 		phinger-cursors \
