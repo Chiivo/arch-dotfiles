@@ -28,8 +28,8 @@ require('packer').startup(function()
 	use 'L3MON4D3/LuaSnip'
 	use 'saadparwaiz1/cmp_luasnip'
 	use 'rafamadriz/friendly-snippets'
-	use 'nvim-orgmode/orgmode'
 	use 'jbyuki/nabla.nvim'
+	use 'nvim-orgmode/orgmode'
 	use 'dhruvasagar/vim-table-mode'
 	use 'numToStr/Comment.nvim'
 	use 'rcarriga/nvim-notify'
@@ -70,7 +70,7 @@ set number
 set scrolloff=999
 set smartcase
 set termguicolors
-syntax on
+" syntax on
 set laststatus=3
 set linebreak
 ]])
@@ -384,7 +384,7 @@ require("twilight").setup {
 		"lua_statement",
 		"call_statement",
 	},
-	exclude = { "dashboard", "norg", "org" },
+	exclude = { "dashboard", "org" },
 }
 vim.cmd([[autocmd VimEnter * Twilight]])
 
@@ -620,7 +620,7 @@ require('feline').setup({
 -- Treesitter
 require'nvim-treesitter.configs'.setup {
 	-- A list of parser names, or "all"
-	ensure_installed = {'bash', 'c', 'css', 'latex', 'lua', 'nix', 'norg', 'org', 'rust', 'scss', 'toml', 'vim'},
+	ensure_installed = {'bash', 'c', 'css', 'latex', 'lua', 'nix', 'org', 'rust', 'scss', 'toml', 'vim'},
 	-- Install parsers synchronously (only applied to `ensure_installed`)
 	sync_install = false,
 	-- List of parsers to ignore installing (for "all")
@@ -640,7 +640,7 @@ require'nvim-treesitter.configs'.setup {
 	  -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
 	  -- Using this option may slow down your editor, and you may see some duplicate highlights.
 	  -- Instead of true it can also be a list of languages
-		additional_vim_regex_highlighting = {'norg'}, -- Required for spellcheck, some LaTex highlights and code block highlights that do not have ts grammar
+		additional_vim_regex_highlighting = {}, -- Required for spellcheck, some LaTex highlights and code block highlights that do not have ts grammar
 	},
 	--Treesitter Playground
 	playground = {
@@ -664,11 +664,12 @@ require'nvim-treesitter.configs'.setup {
 }
 
 -- Orgmode
+require('orgmode').setup()
 require('orgmode').setup_ts_grammar()
-require('nvim-treesitter.configs').setup {
+require('nvim-treesitter.configs').setup{
   highlight = {
     enable = true,
-  },
+	},
   ensure_installed = {'org'},
 }
 require('orgmode').setup({
@@ -784,7 +785,6 @@ cmp.setup{
 		{ name = 'luasnip' }, -- For luasnip users.
 		{ name = 'buffer' },
 		{ name = 'path' },
-		{ name = 'norg' },
 		{ name = 'org' },
 	},
 	window = {
