@@ -16,6 +16,9 @@ run nm-applet
 run solaar --window=hide
 run ~/scripts/mousesettings
 
+### FCITX ###
+run fcitx -d
+
 ### Tablet ###
 systemctl --user enable opentabletdriver --now
 
