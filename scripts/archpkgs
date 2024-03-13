@@ -41,9 +41,8 @@ pkgsinstall() {
 		fontconfig \
 		man-db \
 		syncthing \
-		fcitx-im \
-		fcitx-configtool \
-		fcitx-mozc \
+		fcitx5-im \
+		fcitx5-mozc \
 		\
 		`# Apps` \
 		alacritty \
