@@ -40,8 +40,12 @@ pkgsinstall() {
 		wine-staging \
 		fontconfig \
 		man-db \
+		syncthing \
+		fcitx-im \
+		fcitx-configtool \
+		fcitx-mozc \
 		\
-		`# General` \
+		`# Apps` \
 		alacritty \
 		thunar \
 		thunar-archive-plugin \
@@ -105,7 +109,7 @@ aurinstall() {
 		cbonsai \
 		vesktop-bin \
 		\
-		`# General` \
+		`# Apps` \
 		librewolf-bin \
 		nvim-packer-git \
 		logseq-desktop-bin \
@@ -137,9 +141,10 @@ copyfiles() {
 	cp -r ./arch-dotfiles/scripts/ ./
 	cp -r ./arch-dotfiles/fonts/ ./.local/share/
 	cp -r ./arch-dotfiles/.bashrc ./
+	cp -r ./arch-dotfiles/.bash_profile ./
 	cp -r ./arch-dotfiles/.Xresources ./
-	sudo cp ./archdotfiles/sddm/sddm.conf /etc/sddm.conf
-	sudo cp ./archdotfiles/sddm/theme.conf /usr/share/sddm/themes/sugar-candy/theme.conf
+	sudo cp ./arch-dotfiles/sddm/sddm.conf /etc/sddm.conf
+	sudo cp ./arch-dotfiles/sddm/theme.conf /usr/share/sddm/themes/sugar-candy/theme.conf
 }
 
 case "$1" in
