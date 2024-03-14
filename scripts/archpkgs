@@ -62,6 +62,7 @@ pkgsinstall() {
 		papirus-icon-theme \
 		virtualbox \
 		obs-studio \
+		scrcpy \
 		\
 		`# Art Stuff` \
 		krita \
