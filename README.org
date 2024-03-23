@@ -25,10 +25,10 @@
 - Out of sync kernel and driver updates can cause system to break
   - if system breaks, *arch-chroot* into system through USB environment
   - to chroot into system, go into the installer USB and run
-#+begin_src bash
-mount /dev/nvme0n1p3 /mnt
-arch-chroot /mnt
-#+end_src
+  #+begin_src bash
+  mount /dev/nvme0n1p3 /mnt
+  arch-chroot /mnt
+  #+end_src
 - To make executable bash file:
 #+begin_src bash
 chmod +x /script/path
