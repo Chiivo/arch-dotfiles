@@ -38,7 +38,7 @@ chmod +x /script/path
 chown (username) /file/path
 #+end_src
 - To extract zip into folder with same name:
-- #+begin_src bash
+#+begin_src bash
 7z x *.zip -o\*
 #+end_src
 - add the following to fstab to have second drive appear properly in thunar
