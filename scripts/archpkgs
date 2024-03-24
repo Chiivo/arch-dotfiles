@@ -23,8 +23,7 @@ pkgsinstall() {
 		awesome \
 		\
 		`# Drivers` \
-		nvidia \
-		nvidia-settings \
+		xf86-video-amdgpu \
 		\
 		`# Terminal Stuff` \
 		xorg-xrdb \
@@ -38,7 +37,6 @@ pkgsinstall() {
 		xclip \
 		mpv \
 		wine-staging \
-		fontconfig \
 		man-db \
 		syncthing \
 		fcitx5-im \
@@ -85,9 +83,9 @@ pkgsinstall() {
 		steam \
 		retroarch \
 		godot \
-		dualsensectl-git \
 		\
 		`# Fonts` \
+		fontconfig \
 		noto-fonts \
 		noto-fonts-cjk \
 		noto-fonts-emoji
@@ -124,14 +122,14 @@ aurinstall() {
 		bitwig-studio \
 		\
 		`# Game Stuff` \
-		r2modman-appimage \
+		# r2modman-bin \
 		prismlauncher \
 		heroic-games-launcher-bin \
+		# dualsensectl \
 		\
 		`# rpcs3-git` \
 		soundux \
 		`# Fonts` \
-		ttf-comfortaa \
 		ttf-mac-fonts \
 		otf-symbola
 }
