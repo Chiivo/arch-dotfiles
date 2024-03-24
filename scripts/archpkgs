@@ -24,6 +24,8 @@ pkgsinstall() {
 		\
 		`# Drivers` \
 		xf86-video-amdgpu \
+		hip-runtime-amd \
+		vulkan-radeon \
 		\
 		`# Terminal Stuff` \
 		xorg-xrdb \
