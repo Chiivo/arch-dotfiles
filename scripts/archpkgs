@@ -102,7 +102,7 @@ aurinstall() {
 		awesome-bling-git \
 		\
 		`# Terminal Stuff` \
-		nitch \
+		catnip-git \
 		picom-git \
 		joshuto-bin \
 		shell-color-scripts \
