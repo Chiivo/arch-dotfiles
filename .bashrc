@@ -24,11 +24,11 @@ PS1='\[\e[37m\]\[\e[0m\]\[\e[47;1m\]\[\e[30m\]\w  \[\e[0m\]\[\e[37m\]\[
 
 #Startup
 r=$((RANDOM%15))
-  command[0]='nitch'
-  command[1]='nitch'
-  command[2]='nitch'
-  command[3]='nitch'
-  command[4]='nitch'
+  command[0]='catnip'
+  command[1]='catnip'
+  command[2]='catnip'
+  command[3]='catnip'
+  command[4]='catnip'
   command[5]='sleep .1; cbonsai -L 25 -p'
   command[6]='sleep .1; cbonsai -L 30 -p'
   command[7]='sleep .1; cbonsai -L 35 -p'
