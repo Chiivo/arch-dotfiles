@@ -9,16 +9,16 @@
 ##############################################
 [stats]
 username = {icon = " ", name = "user", color = "(RD)"}
-hostname = {icon = " ", name = "hname", color = "(CN)"}
-uptime   = {icon = " ", name = "uptime", color = "(YW)"}
-distro   = {icon = " ", name = "distro", color = "(GN)"}
-kernel   = {icon = " ", name = "kernel", color = "(BE)"}
-desktop  = {icon = " ", name = "desktp", color = "(MA)"}
-terminal = {icon = " ", name = "term", color = "(RD)"}
-shell    = {icon = " ", name = "shell", color = "(CN)"}
-memory   = {icon = " ", name = "memory", color = "(YW)"}
-disk     = {icon = " ", name = "disk", color = "(GN)"}
-colors   = {icon = " ", name = "colors", color = "!DT!", symbol = ""}
+# hostname = {icon = " ", name = "hname", color = "(CN)"}
+uptime   = {icon = " ", name = "uptime", color = "(CN)"}
+distro   = {icon = " ", name = "distro", color = "(YW)"}
+kernel   = {icon = " ", name = "kernel", color = "(GN)"}
+# desktop  = {icon = " ", name = "desktp", color = "(MA)"}
+terminal = {icon = " ", name = "term", color = "(BE)"}
+shell    = {icon = " ", name = "shell", color = "(MA)"}
+# memory   = {icon = " ", name = "memory", color = "(YW)"}
+# disk     = {icon = " ", name = "disk", color = "(GN)"}
+colors   = {icon = " ", name = "colors", color = "(WE)", symbol = ""}
 
 ##############################################
 ##               Misc Config                ##
