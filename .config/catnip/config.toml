@@ -19,7 +19,7 @@ shell    = {icon = " ", name = "shell", color = "(MA)"}
 # cpu      = {icon = " ", name = "cpu", color = "(RD)"}
 # disk     = {icon = " ", name = "disk", color = "(GN)"}
 # memory   = {icon = " ", name = "memory", color = "(YW)"}
-colors   = {icon = " ", name = "colors", color = "!DT!", symbol = ""}
+colors   = {icon = " ", name = "colors", color = "(WE)", symbol = ""}
 
 ##############################################
 ##               Misc Config                ##
