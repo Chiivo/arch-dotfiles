@@ -11,11 +11,11 @@
 username = {icon = " ", name = "user", color = "(RD)"}
 # hostname = {icon = " ", name = "hname", color = "(YW)"}
 uptime   = {icon = " ", name = "uptime", color = "(CN)"}
-distro   = {icon = " ", name = "distro", color = "(YW)"}
+distro   = {icon = " ", name = "distro", color = "(YW)"}
 kernel   = {icon = " ", name = "kernel", color = "(GN)"}
 # desktop  = {icon = " ", name = "desktp", color = "(CN)"}
-terminal = {icon = " ", name = "term", color = "(BE)"}
-shell    = {icon = " ", name = "shell", color = "(MA)"}
+terminal = {icon = " ", name = "term", color = "(BE)"}
+shell    = {icon = " ", name = "shell", color = "(MA)"}
 # cpu      = {icon = " ", name = "cpu", color = "(RD)"}
 # disk     = {icon = " ", name = "disk", color = "(GN)"}
 # memory   = {icon = " ", name = "memory", color = "(YW)"}
