@@ -665,7 +665,6 @@ require'nvim-treesitter.configs'.setup {
 
 -- Orgmode
 require('orgmode').setup()
-require('orgmode').setup_ts_grammar()
 require('nvim-treesitter.configs').setup{
   highlight = {
     enable = true,
