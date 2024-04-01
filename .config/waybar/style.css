@@ -60,7 +60,7 @@ window#waybar {
 }
 
 #tray {
-	margin: 5px 0 10px 0;
+	margin: 5px 0 5px 0;
 }
 #tray > .passive {
   -gtk-icon-effect: dim;
@@ -79,7 +79,7 @@ window#waybar {
 }
 
 #clock {
-	margin: 5px 0;
+	margin: 5px 0 10px 0;
 }#clock:hover {
 	margin: 5px 0;
 	color: @blue;
