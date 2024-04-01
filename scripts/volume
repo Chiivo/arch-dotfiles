@@ -64,6 +64,7 @@ volmute() {
 case "$1" in
 	-v) getvol;;
 	-s) getvolsym;;
+	-b) volumebar;;
 	-u) volup;;
 	-d) voldown;;
 	-m) volmute;;
