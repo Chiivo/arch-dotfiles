@@ -60,7 +60,7 @@ window#waybar {
 }
 
 #tray {
-	margin: 5px 0 5px 0;
+	margin: 5px 0;
 }
 #tray > .passive {
   -gtk-icon-effect: dim;
