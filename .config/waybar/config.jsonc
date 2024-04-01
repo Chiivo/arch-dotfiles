@@ -1,0 +1,84 @@
+// -*- mode: jsonc -*-
+{
+	"output": ["DP-1"], // Choose monitor
+	"layer": "top", // Waybar at top layer
+	"position": "left", // Waybar position (top|bottom|left|right)
+	"height": "auto", // Waybar height (to be removed for auto height)
+	"width": 30, // Waybar width
+	"margin": "10px 0 10px 10px",
+	"spacing": 0, // Gaps between modules (4px)
+
+	// Choose the order of the modules
+	"modules-left": [
+		"custom/poweroff"
+	],
+	"modules-center": [
+		"hyprland/workspaces"
+	],
+	"modules-right": [
+		"tray",
+		"pulseaudio",
+		"clock"
+	],
+
+	// Top Modules
+	"custom/poweroff": {
+	  "format": "",
+		"on-click": "poweroff",
+		"tooltip": false
+	},
+	
+	// Middle Modules
+	"hyprland/workspaces": {
+		"on-click": "activate",
+		"activate-only": false,
+	  "all-outputs": true,
+	  "format": "{icon}",
+	  "format-icons": {
+			"1": "一",
+			"2": "二",
+			"3": "三",
+			"4": "四",
+			"5": "五"
+	    // "urgent": "⬤",
+	    // "active": "⬤",
+	    // "empty": "⬤",
+	    // "default": "⬤"
+	  },
+		"persistent-workspaces": {
+			"*": 5
+		}
+	},
+	
+	// Bottom Modules
+	"pulseaudio": {
+	  // "scroll-step": 1, // %, can be a float
+	  "format": "{icon}",
+	  "format-muted": "",
+	  "format-bluetooth": "{icon}",
+	  "format-bluetooth-muted": "",
+	  "format-source": "",
+	  "format-source-muted": "",
+	  "format-icons": {
+	  	"default": ["","","","", "", "", "", "", "", ""]
+	  },
+	  "on-click": "pavucontrol"
+	},
+	"clock": {
+		"tooltip-format": "<tt><big>{calendar}</big></tt>",
+		"format": "{:%H\n%M}",
+		"calendar": {
+			"mode": "month",
+			"format": {
+				"months": "<span color='#f5d1c8'><b>{}</b></span>",
+				"days": "<span color='#dddddd'><b>{}</b></span>",
+				"weekdays": "<span color='#77bee0'><b>{}</b></span>",
+				"today": "<span color='#dd91f3'><b><u>{}</u></b></span>"
+			}
+		}
+	},
+	"tray": {
+	  "icon-size": 24,
+	  "spacing": 5
+	}
+}

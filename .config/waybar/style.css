@@ -1,0 +1,86 @@
+@define-color darkblack #141515;
+@define-color midblack #191a1a;
+@define-color black #262727;
+@define-color gray #555657;
+@define-color white #dddddd;
+@define-color red #ff8278;
+@define-color orange #ffc178;
+@define-color green #bde077;
+@define-color yellow #eadc84;
+@define-color blue #77bee0;
+@define-color magenta #dd91f3;
+@define-color pink #f5d1c8;
+
+* {
+	font-family: monospace;
+	font-weight: bold;
+	font-size: 18px;
+	margin: 0px;
+	padding: 0px;
+}
+
+window#waybar {
+	border-radius: 10;
+	background-color: @black;
+	color: @pink;
+}
+
+#custom-poweroff {
+	margin: 10px 0 5px 0;
+}
+#custom-poweroff:hover {
+	color: @red;
+}
+
+#workspaces button.empty {
+	color: @gray;
+}
+#workspaces button.empty:hover {
+	color: @white;
+}
+#workspaces button {
+	margin: 5px 0px;
+	color: @magenta;
+}
+#workspaces button:hover {
+	background-color: @gray;
+	color: @white;
+}
+#workspaces button.visible {
+	color: inherit;
+}
+#workspaces button.visible:hover {
+	color: @white;
+}
+#workspaces button.urgent {
+	color: @red;
+}
+#workspaces button.urgent:hover {
+	color: @white;
+}
+
+#tray {
+	margin: 5px 0 10px 0;
+}
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: @red;
+}
+
+#pulseaudio {
+	margin: 5px 0;
+}
+#pulseaudio:hover {
+	margin: 5px 0;
+	color: @yellow;
+}
+
+#clock {
+	margin: 5px 0;
+}#clock:hover {
+	margin: 5px 0;
+	color: @blue;
+}
