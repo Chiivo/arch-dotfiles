@@ -5,16 +5,18 @@ help() {
 	echo '	-s,			save selection'
 }
 
-areacopy() {	
-	grim -g "$(slurp -w "0" -b "#191a1a75")" - | wl-copy;
-	wl-paste -t image/png > /tmp/screenshot.png
+areacopy() {
+	maim -usb 2 /tmp/screenshot.png || exit 1;
+	sleep .1;
+	xclip -selection clipboard < /tmp/screenshot.png -t image/png
 	notify-send -i /tmp/screenshot.png 'Screenshot' 'Selection Copied'
 	mpv /usr/share/sounds/freedesktop/stereo/camera-shutter.oga
 }
 
 areasave() {
-	grim -g "$(slurp -w "0" -b "#191a1a75")" /mnt/SSD/Images/Screenshots/$(date +'%s_grim.png');
-	notify-send -i /mnt/SSD/Images/Screenshots/$(date +'%s_grim.png') 'Screenshot' 'Selection Saved'
+	maim -usb 2 /mnt/SSD/Images/Screenshots/screenshot.png || exit 1;
+	sleep .1;
+	notify-send -i /mnt/SSD/Images/Screenshots/screenshot.png 'Screenshot' 'Selection Saved'
 	mpv /usr/share/sounds/freedesktop/stereo/camera-shutter.oga
 }
 
