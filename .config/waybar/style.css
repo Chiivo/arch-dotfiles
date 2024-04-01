@@ -40,7 +40,7 @@ window#waybar {
 }
 #workspaces button {
 	margin: 5px 0px;
-	color: @magenta;
+	color: @white;
 }
 #workspaces button:hover {
 	background-color: @gray;
