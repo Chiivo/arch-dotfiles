@@ -9,4 +9,4 @@ command = "alacritty --class scratchpad"
 class = "scratchpad"
 size = "50% 50%"
 max_size = "1920px 100%"
-margin = 10
+margin = 15
