@@ -1,0 +1,162 @@
+#!/usr/bin/env sh
+
+help() {
+	echo '	-p,			install paru'
+	echo '	-i,			install packages from main repos'
+	echo '	-a,			install packages from aur'
+	echo '	-c,			copy files to proper places'
+}
+
+paruinstall() {
+	sudo pacman -S --needed base-devel
+	git clone https://aur.archlinux.org/paru.git
+	cd paru
+	makepkg -si
+}
+
+pkgsinstall() {
+	sudo pacman -S \
+		`# Display Manager` \
+		sddm \
+		\
+		`# Window Manager` \
+		hyprland \
+		cliphist \
+		hyprpaper \
+		waybar \
+		xdg-desktop-portal-hyprland \
+		grim \
+		slurp \
+		\
+		`# Drivers` \
+		xf86-video-amdgpu \
+		hip-runtime-amd \
+		vulkan-radeon \
+		\
+		`# Terminal Stuff` \
+		wget \
+		neovim \
+		nsxiv \
+		zathura \
+		bottom \
+		mpv \
+		wine-staging \
+		man-db \
+		syncthing \
+		fcitx5-im \
+		fcitx5-mozc \
+		\
+		`# Apps` \
+		alacritty \
+		thunar \
+		thunar-archive-plugin \
+		file-roller\
+		thunar-volman \
+		tumbler \
+		gvfs \
+		gvfs-mtp \
+		network-manager-applet \
+		solaar \
+		nwg-look \
+		qt5ct \
+		papirus-icon-theme \
+		virtualbox \
+		obs-studio \
+		scrcpy \
+		\
+		`# Art Stuff` \
+		krita \
+		blender \
+		\
+		`# Audio Stuff` \
+		pipewire-pulse \
+		pipewire-alsa \
+		pipewire-jack \
+		alsa-utils \
+		pavucontrol \
+		blueman \
+		bluez-utils \
+		sound-theme-freedesktop \
+		musescore \
+		yabridge \
+		yabridgectl \
+		helvum \
+		calf \
+		easyeffects \
+		\
+		`# Game Stuff` \
+		steam \
+		retroarch \
+		godot \
+		\
+		`# Fonts` \
+		fontconfig \
+		noto-fonts \
+		noto-fonts-cjk \
+		noto-fonts-emoji
+}
+
+aurinstall() {
+	paru -S --skipreview \
+		`# Display Greeter` \
+		sddm-sugar-candy-git \
+		\
+		`# Window Manager Stuff` \
+		hyprpicker \
+		swayosd-git \
+		pyprland \
+		\
+		`# Terminal Stuff` \
+		catnip-git \
+		joshuto-bin \
+		shell-color-scripts \
+		cbonsai \
+		vesktop-bin \
+		rofi-lbonn-wayland-git \
+		\
+		`# Apps` \
+		librewolf-bin \
+		nvim-packer-git \
+		logseq-desktop-bin \
+		spotify \
+		orchis-theme \
+		phinger-cursors \
+		vial-appimage \
+		\
+		`# Art` \
+		opentabletdriver \
+		\
+		`# Music Stuff` \
+		bitwig-studio \
+		\
+		`# Game Stuff` \
+		# r2modman-bin \
+		prismlauncher \
+		heroic-games-launcher-bin \
+		# dualsensectl \
+		\
+		`# rpcs3-git` \
+		soundux \
+		\
+		`# Fonts` \
+		ttf-mac-fonts \
+		otf-symbola
+}
+
+copyfiles() {
+	cp -r ./arch-dotfiles/.config/ ./
+	cp -r ./arch-dotfiles/scripts/ ./
+	cp -r ./arch-dotfiles/fonts/ ./.local/share/
+	cp -r ./arch-dotfiles/.bashrc ./
+	cp -r ./arch-dotfiles/.bash_profile ./
+	sudo cp ./arch-dotfiles/sddm/sddm.conf /etc/sddm.conf
+	sudo cp ./arch-dotfiles/sddm/theme.conf /usr/share/sddm/themes/sugar-candy/theme.conf
+}
+
+case "$1" in
+	-i) pkgsinstall;;
+	-p) paruinstall;;
+	-a) aurinstall;;
+	-c) copyfiles;;
+	*) help;;
+esac
