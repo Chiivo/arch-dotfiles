@@ -60,7 +60,7 @@
 	  "format-source": "",
 	  "format-source-muted": "",
 	  "format-icons": {
-	  	"default": ["","","","", "", "", "", "", "", ""]
+	  	"default": ["","","","", "", "", "", "", "", ""]
 	  },
 	  "on-click": "pavucontrol"
 	},
