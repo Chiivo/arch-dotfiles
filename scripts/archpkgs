@@ -20,13 +20,7 @@ pkgsinstall() {
 		sddm \
 		\
 		`# Window Manager` \
-		hyprland \
-		cliphist \
-		hyprpaper \
-		waybar \
-		xdg-desktop-portal-hyprland \
-		grim \
-		slurp \
+		awesome \
 		\
 		`# Drivers` \
 		xf86-video-amdgpu \
@@ -34,11 +28,15 @@ pkgsinstall() {
 		vulkan-radeon \
 		\
 		`# Terminal Stuff` \
+		xorg-xrdb \
 		wget \
 		neovim \
 		nsxiv \
 		zathura \
+		rofi \
 		bottom \
+		maim \
+		xclip \
 		mpv \
 		wine-staging \
 		man-db \
@@ -56,9 +54,11 @@ pkgsinstall() {
 		gvfs \
 		gvfs-mtp \
 		network-manager-applet \
+		pavucontrol \
+		blueman \
+		bluez-utils \
+		lxappearance \
 		solaar \
-		nwg-look \
-		qt5ct \
 		papirus-icon-theme \
 		virtualbox \
 		obs-studio \
@@ -73,9 +73,6 @@ pkgsinstall() {
 		pipewire-alsa \
 		pipewire-jack \
 		alsa-utils \
-		pavucontrol \
-		blueman \
-		bluez-utils \
 		sound-theme-freedesktop \
 		musescore \
 		yabridge \
@@ -101,16 +98,16 @@ aurinstall() {
 		`# Display Greeter` \
 		sddm-sugar-candy-git \
 		\
-		`# Window Manager Stuff` \
-		hyprpicker \
+		`# Display Manager Stuff` \
+		awesome-bling-git \
 		\
 		`# Terminal Stuff` \
 		catnip-git \
+		picom-git \
 		joshuto-bin \
 		shell-color-scripts \
 		cbonsai \
 		vesktop-bin \
-		rofi-lbonn-wayland-git \
 		\
 		`# Apps` \
 		librewolf-bin \
@@ -147,6 +144,7 @@ copyfiles() {
 	cp -r ./arch-dotfiles/fonts/ ./.local/share/
 	cp -r ./arch-dotfiles/.bashrc ./
 	cp -r ./arch-dotfiles/.bash_profile ./
+	cp -r ./arch-dotfiles/.Xresources ./
 	sudo cp ./arch-dotfiles/sddm/sddm.conf /etc/sddm.conf
 	sudo cp ./arch-dotfiles/sddm/theme.conf /usr/share/sddm/themes/sugar-candy/theme.conf
 }
