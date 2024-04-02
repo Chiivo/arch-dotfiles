@@ -6,20 +6,19 @@
 - Distro: arch
 - Display Manager: sddm
 - Greeter: sugar candy
-- Window Manager: awesome
+- Compositor: hyprland
 - Image Viewer: nsxiv
-- Compositer: picom
-- App Launcher: rofi
-- Theme Manager: lxappearance
+- App Launcher: rofi-lbonn-wayland
+- Theme Manager: nwg-look, qt5ct
 - Icon Theme: papirus
 - Widget Theme: orchis
 - Mouse Cursor Icons: phinger
 - Terminal: alacritty
-- Text Editors: emacs, neovim
-- Browser: firefox
+- Text Editors: neovim
+- Browser: librewolf
 - File Managers: thunar, joshuto
 - Video Player: mpv
-- Terminal Stuff: nitch, cbonsai, shell-color-scripts
+- Terminal Stuff: catnip, cbonsai, shell-color-scripts
 
 * Reminders
 - Out of sync kernel and driver updates can cause system to break
