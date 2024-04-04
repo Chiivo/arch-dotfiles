@@ -62,7 +62,8 @@
 	  "format-icons": {
 	  	"default": ["","","","", "", "", "", "", "", ""]
 	  },
-	  "on-click": "pavucontrol"
+	  "on-click": "pavucontrol",
+    "ignored-sinks": ["Easy Effects Sink"]
 	},
 	"clock": {
 		"tooltip-format": "<tt><big>{calendar}</big></tt>",
