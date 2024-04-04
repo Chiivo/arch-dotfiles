@@ -58,7 +58,7 @@ pkgsinstall() {
 		network-manager-applet \
 		solaar \
 		nwg-look \
-		qt5ct \
+		qt6ct \
 		papirus-icon-theme \
 		virtualbox \
 		obs-studio \
