@@ -103,6 +103,7 @@ aurinstall() {
 		\
 		`# Window Manager Stuff` \
 		hyprpicker \
+		pyprland \
 		\
 		`# Terminal Stuff` \
 		catnip-git \
