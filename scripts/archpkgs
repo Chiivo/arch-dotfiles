@@ -119,7 +119,7 @@ aurinstall() {
 		logseq-desktop-bin \
 		spotify \
 		orchis-theme \
-		phinger-cursors \
+		googledot-cursor-theme \
 		vial-appimage \
 		\
 		`# Art` \
