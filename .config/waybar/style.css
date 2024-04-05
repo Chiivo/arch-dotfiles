@@ -33,30 +33,30 @@ window#waybar {
 }
 
 #workspaces button.empty {
-	color: @gray;
+	background-color: @gray;
 }
 #workspaces button.empty:hover {
-	color: @white;
+	background-color: @white;
 }
 #workspaces button {
-	margin: 5px 0px;
-	color: @white;
+	border-radius: 5px;
+	margin: 5px;
+	background-color: @white;
 }
 #workspaces button:hover {
-	background-color: @gray;
-	color: @white;
+	background-color: @white;
 }
 #workspaces button.visible {
-	color: inherit;
+	background-color: @pink;
 }
 #workspaces button.visible:hover {
-	color: @white;
+	background-color: @white;
 }
 #workspaces button.urgent {
-	color: @red;
+	background-color: @red;
 }
 #workspaces button.urgent:hover {
-	color: @white;
+	background-color: @white;
 }
 
 #tray {
