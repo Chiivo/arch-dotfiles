@@ -47,6 +47,7 @@ window#waybar {
 	background-color: @white;
 }
 #workspaces button.visible {
+	padding: 5px 0;
 	background-color: @pink;
 }
 #workspaces button.visible:hover {
