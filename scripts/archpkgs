@@ -23,7 +23,6 @@ pkgsinstall() {
 		hyprland \
 		cliphist \
 		hyprpaper \
-		waybar \
 		xdg-desktop-portal-hyprland \
 		grim \
 		slurp \
@@ -102,6 +101,7 @@ aurinstall() {
 		sddm-sugar-candy-git \
 		\
 		`# Window Manager Stuff` \
+		eww \
 		hyprpicker \
 		pyprland \
 		\
