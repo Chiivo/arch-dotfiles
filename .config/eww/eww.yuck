@@ -33,7 +33,7 @@
       (for workspace in workspaces
         (eventbox
           :onclick "hyprctl dispatch workspace ${workspace.id}"
-          (box
+          (button
             :class "workspace-entry ${workspace.id == current_workspace ? "current" : ""} ${workspace.windows > 0 ? "occupied" : "empty"}"
             (label
               :text ""
@@ -195,7 +195,7 @@
   :geometry (geometry
     :x "10px"
     :width "30px"
-    :height "75%"
+    :height "50%"
     :anchor "left center"
   )
   :windowtype "dock"
