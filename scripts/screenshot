@@ -5,17 +5,27 @@ help() {
 	echo '	-s,			save selection'
 }
 
-areacopy() {	
-	grim -g "$(slurp -w "0" -b "#191a1a75")" - | wl-copy;
-	wl-paste -t image/png > /tmp/screenshot.png
-	notify-send -i /tmp/screenshot.png 'Screenshot' 'Selection Copied'
-	mpv /usr/share/sounds/freedesktop/stereo/camera-shutter.oga
+areacopy() {
+	if
+		grim -g "$(slurp -w "0" -b "#191a1a75")" - | wl-copy;
+		wl-paste -t image/png > /tmp/screenshot.png
+	then
+		notify-send -i /tmp/screenshot.png 'Screenshot' 'Selection Copied'
+		mpv /usr/share/sounds/freedesktop/stereo/camera-shutter.oga
+	else
+		exit
+	fi
 }
 
 areasave() {
-	grim -g "$(slurp -w "0" -b "#191a1a75")" /mnt/SSD/Images/Screenshots/$(date +'%s_grim.png');
-	notify-send -i /mnt/SSD/Images/Screenshots/$(date +'%s_grim.png') 'Screenshot' 'Selection Saved'
-	mpv /usr/share/sounds/freedesktop/stereo/camera-shutter.oga
+	if
+		grim -g "$(slurp -w "0" -b "#191a1a75")" /mnt/SSD/Images/Screenshots/$(date +'%s_grim.png');
+	then
+		notify-send -i /mnt/SSD/Images/Screenshots/$(date +'%s_grim.png') 'Screenshot' 'Selection Saved'
+		mpv /usr/share/sounds/freedesktop/stereo/camera-shutter.oga
+	else
+		exit
+	fi
 }
 
 case "$1" in
