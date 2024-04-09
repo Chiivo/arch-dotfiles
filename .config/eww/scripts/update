@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+vol-update() {
+	eww update getvolsym=$(~/scripts/volume -s)
+}
+
+volbar-update() {
+	timeout 2s eww open volumebar
+	sleep 2
+	eww close volumebar
+}
+
+case "$1" in
+	-u) vol-update;;
+	-b) volbar-update;;
+esac

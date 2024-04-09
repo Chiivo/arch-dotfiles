@@ -1,0 +1,29 @@
+// Variables
+$dark-black: #141515;
+$mid-black: #191a1a;
+$black: #262727;
+$gray: #555657;
+$white: #dddddd;
+$pink: #f5d1c8;
+$red: #ff8278;
+$orange: #ffc178;
+$yellow: #eadc84;
+$green: #bde077;
+$blue: #77bee0;
+$purple: #dd91f3;
+$topmargin: 10px 0px 5px 0px;
+$margin: 5px 0px;
+$bottommargin: 5px 0px 10px 0px;
+
+// Global Styles
+* {
+	all: unset;
+	// border-radius: 10px;
+	font-family: monospace;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: bold;
+}
+
+@import "./bar.scss";
+@import "./volumebar.scss";

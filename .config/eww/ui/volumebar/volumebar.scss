@@ -1,0 +1,14 @@
+.volumebar {
+	background-color: $black;
+	border-radius: 10px;
+}
+.volumebar scale trough highlight {
+	background-color: $pink;
+	border-radius: 10px;
+}
+.volumebar scale trough {
+  background-color: $gray;
+	border-radius: 10px;
+  min-height: 10px;
+  margin: 10px;
+}
