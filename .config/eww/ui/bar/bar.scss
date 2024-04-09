@@ -26,6 +26,14 @@
 }
 
 // Workspaces
+@keyframes grow {
+  from { padding: 0px; }
+  to { padding: 5px 0; }
+}
+@keyframes shrink {
+  from { padding: 5px 0; }
+  to { padding: 0px; }
+}
 .workspace-entry {
 	border-radius: 5px;
 	margin: 5px 10px;
@@ -42,6 +50,8 @@
 .current {
 	background-color: $pink;
 	padding: 5px 0;
+  animation-name: grow;
+  animation-duration: 100ms;
 }
 
 // Volume
