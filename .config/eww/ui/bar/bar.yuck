@@ -95,8 +95,8 @@
     :orientation "v"
     (button
       :class "label-vol"
-      :onclick "amixer -D pulse sset Master toggle"
-      :onmiddleclick "amixer -D pulse sset Master 50%"
+      :onclick "amixer -D pulse sset Master toggle; ~/.config/eww/scripts/update -u"
+      :onmiddleclick "amixer -D pulse sset Master 50%; ~/.config/eww/scripts/update -u"
       :onrightclick "pavucontrol &"
       (label
         :text getvolsym

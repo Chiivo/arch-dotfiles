@@ -5,7 +5,7 @@ vol-update() {
 }
 
 volbar-update() {
-	timeout 2s eww open volumebar
+	eww open volumebar
 	sleep 2
 	eww close volumebar
 }
