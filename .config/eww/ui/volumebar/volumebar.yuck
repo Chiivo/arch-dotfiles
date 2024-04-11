@@ -21,6 +21,6 @@
     :height "30px"
     :anchor "bottom center"
   )
-  :stacking "fg"
+  :stacking "overlay"
   (volumebar)
 )
