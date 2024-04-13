@@ -10,7 +10,7 @@
 [stats]
 username = {icon = " ", name = "user", color = "(RD)"}
 # hostname = {icon = " ", name = "hname", color = "(YW)"}
-uptime   = {icon = " ", name = "uptime", color = "(CN)"}
+packages  = {icon = " ", name = "packages", color = "(CN)"}
 distro   = {icon = " ", name = "distro", color = "(YW)"}
 kernel   = {icon = " ", name = "kernel", color = "(GN)"}
 # desktop  = {icon = " ", name = "desktp", color = "(CN)"}
