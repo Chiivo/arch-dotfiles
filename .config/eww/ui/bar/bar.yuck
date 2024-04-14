@@ -163,7 +163,6 @@
 (defpoll month 
   :interval "10h"
   "month=$(date +%m)
-  month=$((month-1))
   echo $month"
 )
 (defpoll year 
