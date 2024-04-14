@@ -184,11 +184,11 @@
   (bar)
 )
 (defwindow calendar
+  :monitor 0
   :geometry (geometry
-    :x "70px" 
-    :y "880px" 
+    :x "10px" 
+    :y "600px" 
     :width "270px"
-    :height "60px"
   )
   (cal)
 )
