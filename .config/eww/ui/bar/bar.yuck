@@ -147,7 +147,7 @@
 )
 (deflisten getvolsym
   :initial ""
-  "~/scripts/volume -s"
+  "while :; do sleep 1; ~/scripts/volume -s; done"
 )
 (defvar vol-revealer
   false
